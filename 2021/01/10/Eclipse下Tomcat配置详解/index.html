@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="萌新的简易博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ariawater&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="Eclipse下Tomcat配置1. 版本选择本人使用了tomcat 7,8,9 和 JDK 8u231,11,13分别配置，最后tomcat8和JDK 8u231成功。 2.Tomcat配置最基本的系统环境变量配置详见Tomcat自带的帮助文档。先参考这篇tomcat设置系统服务有的电脑启动tomcat服务会出现指定代码错误等，但是不影响正常使用。如果tomcat启动窗口出现乱码，参考tomca">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Eclipse下Tomcat配置详解">
+<meta property="og:url" content="http://example.com/2021/01/10/Eclipse%E4%B8%8BTomcat%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Ariawater&#39;s Blog">
-<meta property="og:description" content="萌新的简易博客">
+<meta property="og:description" content="Eclipse下Tomcat配置1. 版本选择本人使用了tomcat 7,8,9 和 JDK 8u231,11,13分别配置，最后tomcat8和JDK 8u231成功。 2.Tomcat配置最基本的系统环境变量配置详见Tomcat自带的帮助文档。先参考这篇tomcat设置系统服务有的电脑启动tomcat服务会出现指定代码错误等，但是不影响正常使用。如果tomcat启动窗口出现乱码，参考tomca">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-10T07:31:01.000Z">
+<meta property="article:modified_time" content="2021-01-10T07:32:10.102Z">
 <meta property="article:author" content="Ariawater">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/2021/01/10/Eclipse%E4%B8%8BTomcat%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">
 
 
 <script id="page-configurations">
@@ -38,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Ariawater's Blog</title>
+  <title>Eclipse下Tomcat配置详解 | Ariawater's Blog</title>
   
 
 
@@ -141,90 +143,79 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 3 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/10/Eclipse%E4%B8%8BTomcat%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ariawater">
+      <meta itemprop="description" content="萌新的简易博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ariawater's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Eclipse下Tomcat配置详解
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-10 15:31:01 / 修改时间：15:32:10" itemprop="dateCreated datePublished" datetime="2021-01-10T15:31:01+08:00">2021-01-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-10T15:31:01+08:00"
-              content="2021-01-10">
-          01-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/10/Eclipse%E4%B8%8BTomcat%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/" itemprop="url">
-            <span itemprop="name">Eclipse下Tomcat配置详解</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-10T09:00:14+08:00"
-              content="2021-01-10">
-          01-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/10/my-first-blog/" itemprop="url">
-            <span itemprop="name">简单博弈论</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-01-08T18:04:13+08:00"
-              content="2021-01-08">
-          01-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/01/08/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <h4 id="Eclipse下Tomcat配置"><a href="#Eclipse下Tomcat配置" class="headerlink" title="Eclipse下Tomcat配置"></a>Eclipse下Tomcat配置</h4><h5 id="1-版本选择"><a href="#1-版本选择" class="headerlink" title="1. 版本选择"></a>1. 版本选择</h5><p>本人使用了tomcat 7,8,9 和 JDK 8u231,11,13分别配置，最后tomcat8和JDK 8u231成功。</p>
+<h5 id="2-Tomcat配置"><a href="#2-Tomcat配置" class="headerlink" title="2.Tomcat配置"></a>2.Tomcat配置</h5><p>最基本的系统环境变量配置详见Tomcat自带的帮助文档。<br>先参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/kugumao0620/article/details/79517588">tomcat设置系统服务</a><br>有的电脑启动tomcat服务会出现指定代码错误等，但是不影响正常使用。<br>如果tomcat启动窗口出现乱码，参考<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/c910274b39fbdc8d371d2d23.html">tomcat窗口乱码解决</a><br>如果原先安装了tomcat9，删除之后，系统里的tomcat9服务仍在，此时再安装tomcat8，会发生冲突，这时有两种选择：<br>1.<a target="_blank" rel="noopener" href="https://blog.csdn.net/l358366885/article/details/80687836">删除服务列表服务</a><br>2.修改注册表：<br>win+r后输入regedit，找到如下路径<br>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services<br>找到其中的tomcat9和tomcatserver修改里面的ImagePath即可</p>
+<h5 id="3-eclipse下配置tomcat"><a href="#3-eclipse下配置tomcat" class="headerlink" title="3. eclipse下配置tomcat"></a>3. eclipse下配置tomcat</h5><p>建议使用这两篇<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/greatfish/p/5866950.html">修改servers下tomcat配置</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zytbft/article/details/86523723">eclipse配置tomcat</a><br>如果遇到的是8080端口占用问题，参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45342025/article/details/94393288">8080端口被占用处理</a><br>如果出现java错误：The superclass “javax.servlet.http.HttpServlet” 参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/achengmu/p/8082457.html">Java build path</a><br>如果出现误删Server后Tomcat服务器报错：The Tomcat server configuration，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014800380/article/details/53068761">误删Servers解决</a><br>关于404问题，参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40164190/article/details/84571602">Tomcat访问文件404解决</a></p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/10/my-first-blog/" rel="prev" title="简单博弈论">
+      <i class="fa fa-chevron-left"></i> 简单博弈论
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -277,6 +268,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Eclipse%E4%B8%8BTomcat%E9%85%8D%E7%BD%AE"><span class="nav-text">Eclipse下Tomcat配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9"><span class="nav-text">1. 版本选择</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Tomcat%E9%85%8D%E7%BD%AE"><span class="nav-text">2.Tomcat配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-eclipse%E4%B8%8B%E9%85%8D%E7%BD%AEtomcat"><span class="nav-text">3. eclipse下配置tomcat</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
