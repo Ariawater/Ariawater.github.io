@@ -286,9 +286,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="Eclipse下Tomcat配置"><a href="#Eclipse下Tomcat配置" class="headerlink" title="Eclipse下Tomcat配置"></a>Eclipse下Tomcat配置</h4><h5 id="1-版本选择"><a href="#1-版本选择" class="headerlink" title="1. 版本选择"></a>1. 版本选择</h5><p>本人使用了tomcat 7,8,9 和 JDK 8u231,11,13分别配置，最后tomcat8和JDK 8u231成功。</p>
-<h5 id="2-Tomcat配置"><a href="#2-Tomcat配置" class="headerlink" title="2.Tomcat配置"></a>2.Tomcat配置</h5><p>最基本的系统环境变量配置详见Tomcat自带的帮助文档。<br>先参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/kugumao0620/article/details/79517588">tomcat设置系统服务</a><br>有的电脑启动tomcat服务会出现指定代码错误等，但是不影响正常使用。<br>如果tomcat启动窗口出现乱码，参考<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/c910274b39fbdc8d371d2d23.html">tomcat窗口乱码解决</a><br>如果原先安装了tomcat9，删除之后，系统里的tomcat9服务仍在，此时再安装tomcat8，会发生冲突，这时有两种选择：<br>1.<a target="_blank" rel="noopener" href="https://blog.csdn.net/l358366885/article/details/80687836">删除服务列表服务</a><br>2.修改注册表：<br>win+r后输入regedit，找到如下路径<br>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services<br>找到其中的tomcat9和tomcatserver修改里面的ImagePath即可</p>
-<h5 id="3-eclipse下配置tomcat"><a href="#3-eclipse下配置tomcat" class="headerlink" title="3. eclipse下配置tomcat"></a>3. eclipse下配置tomcat</h5><p>建议使用这两篇<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/greatfish/p/5866950.html">修改servers下tomcat配置</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zytbft/article/details/86523723">eclipse配置tomcat</a><br>如果遇到的是8080端口占用问题，参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45342025/article/details/94393288">8080端口被占用处理</a><br>如果出现java错误：The superclass “javax.servlet.http.HttpServlet” 参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/achengmu/p/8082457.html">Java build path</a><br>如果出现误删Server后Tomcat服务器报错：The Tomcat server configuration，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014800380/article/details/53068761">误删Servers解决</a><br>关于404问题，参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40164190/article/details/84571602">Tomcat访问文件404解决</a></p>
+          <h4 id="eclipse下tomcat配置">Eclipse下Tomcat配置</h4>
+<h5 id="版本选择">1. 版本选择</h5>
+<p>本人使用了tomcat 7,8,9 和 JDK 8u231,11,13分别配置，最后tomcat8和JDK 8u231成功。 ##### 2.Tomcat配置 最基本的系统环境变量配置详见Tomcat自带的帮助文档。 先参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/kugumao0620/article/details/79517588">tomcat设置系统服务</a> 有的电脑启动tomcat服务会出现指定代码错误等，但是不影响正常使用。 如果tomcat启动窗口出现乱码，参考<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/c910274b39fbdc8d371d2d23.html">tomcat窗口乱码解决</a> 如果原先安装了tomcat9，删除之后，系统里的tomcat9服务仍在，此时再安装tomcat8，会发生冲突，这时有两种选择： 1.<a target="_blank" rel="noopener" href="https://blog.csdn.net/l358366885/article/details/80687836">删除服务列表服务</a> 2.修改注册表： win+r后输入regedit，找到如下路径 _LOCAL_MACHINE 找到其中的tomcat9和tomcatserver修改里面的ImagePath即可</p>
+<h5 id="eclipse下配置tomcat">3. eclipse下配置tomcat</h5>
+<p>建议使用这两篇 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/greatfish/p/5866950.html">修改servers下tomcat配置</a> <a target="_blank" rel="noopener" href="https://blog.csdn.net/zytbft/article/details/86523723">eclipse配置tomcat</a> 如果遇到的是8080端口占用问题，参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45342025/article/details/94393288">8080端口被占用处理</a> 如果出现java错误：The superclass &quot;javax.servlet.http.HttpServlet&quot; 参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/achengmu/p/8082457.html">Java build path</a> 如果出现误删Server后Tomcat服务器报错：The Tomcat server configuration，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014800380/article/details/53068761">误删Servers解决</a> 关于404问题，参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40164190/article/details/84571602">Tomcat访问文件404解决</a></p>
 
       
     </div>
@@ -454,13 +456,18 @@
 
       
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
