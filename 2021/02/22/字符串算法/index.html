@@ -28,7 +28,7 @@
 <meta property="og:description" content="kmp manacher 字符串Hash 最小表示法">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-22T13:25:54.000Z">
-<meta property="article:modified_time" content="2021-02-22T14:13:17.439Z">
+<meta property="article:modified_time" content="2021-02-22T14:19:33.928Z">
 <meta property="article:author" content="Ariawater">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-02-22 21:25:54 / 修改时间：22:13:17" itemprop="dateCreated datePublished" datetime="2021-02-22T21:25:54+08:00">2021-02-22</time>
+              <time title="创建时间：2021-02-22 21:25:54 / 修改时间：22:19:33" itemprop="dateCreated datePublished" datetime="2021-02-22T21:25:54+08:00">2021-02-22</time>
             </span>
 
           
@@ -207,7 +207,7 @@
 <p>对于一个字符串如<span class="math inline">\(abcd\)</span>，我们尝试将其数值化，例如可以表示为<span class="math inline">\(1234\)</span>。但是字符串可以很长，直接数值化后<span class="math inline">\(C++\)</span>中无法存储。我们考虑将一串很长的数字映射成较短的数字，<span class="math inline">\(Hash\)</span>就是一个好方法。</p>
 <p>取固定值<span class="math inline">\(p，m\)</span>，把字符串看成<span class="math inline">\(p\)</span>进制数，并对每个字符赋值一个<span class="math inline">\(&gt;0\)</span>且远<span class="math inline">\(&lt;p\)</span>的数。例如对小写字母构成的字符串，可以令<span class="math inline">\(a=1,b=2,\cdots z=26\)</span>。求出该<span class="math inline">\(p\)</span>进制数对<span class="math inline">\(m\)</span>的余数，作为该字符串的<span class="math inline">\(Hash\)</span>值。</p>
 <p>一般来说，取<span class="math inline">\(p=131\)</span>或<span class="math inline">\(p=13331\)</span>，此时<span class="math inline">\(Hash\)</span>冲突产生的概率很低。取<span class="math inline">\(m=2^{64}\)</span>，使用<span class="math inline">\(unsigned \,\,long \,\,long\)</span>类型来存储，对于溢出值自动取模。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> bit = <span class="number">131</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ull <span class="title">get_hash</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span>	<span class="comment">//计算字符串s[l~r]的Hash值</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> h[r] - h[l - <span class="number">1</span>] * p[r - l + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; ++i) &#123;</span><br><span class="line">	h[i] = h[i - <span class="number">1</span>] * bit + s[i] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>;</span><br><span class="line">	p[i] = p[i - <span class="number">1</span>] * bit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> bit = <span class="number">131</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ull <span class="title">get_hash</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span>	<span class="comment">//计算字符串s[l~r]的Hash值</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> h[r] - h[l - <span class="number">1</span>] * p[r - l + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; ++i) &#123;</span><br><span class="line">	h[i] = h[i - <span class="number">1</span>] * bit + s[i] - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>;</span><br><span class="line">	p[i] = p[i - <span class="number">1</span>] * bit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
